@@ -5,6 +5,7 @@ pipeline {
         stage("Test behaviour") {
             steps {
                 echo "First step can see the pipeline running"
+                sh 'curl X POST https://api.github.com/users/mralexgray/repos'
             }
         }
     }
