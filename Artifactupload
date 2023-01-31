@@ -1,0 +1,13 @@
+pipeline {
+    agent {
+        label "upload-artifact-s3"
+    }
+
+    stages {
+        stage("Test behaviour") {
+            steps {
+                echo "First step can see the pipeline running"
+            }
+        }
+    }
+}
