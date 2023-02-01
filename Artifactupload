@@ -8,7 +8,7 @@ pipeline {
                     echo "First step can see the pipeline running"
                     final String url = 'https://api.github.com/users/mralexgray/repos'
                     final def ( response,  code) = sh(script: "curl -s -w '\\n%{response_code}'  $url", returnStdout: true).trim().tokenize("\n")
-                    echo "HTTP response status code: $code"
+                    echo "HTTP response status code: $code" + code
                     echo response
                 }
 
