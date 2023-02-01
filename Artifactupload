@@ -5,7 +5,7 @@ pipeline {
         stage("Test behaviour") {
             steps {
                 echo "First step can see the pipeline running"
-                sh curl 'https://whatfix.com/token/export/d546c0ed-c152-4a7d-97d8-a22e095617a6?api_token=4c8e8c2c-103f-49fa-affc-1be6f954a4d0&ent_id=d546c0ed-c152-4a7d-97d8-a22e095617a6&user=owaise.imdad@whatfix.com'
+                sh 'curl https://whatfix.com/token/export/d546c0ed-c152-4a7d-97d8-a22e095617a6?api_token=4c8e8c2c-103f-49fa-affc-1be6f954a4d0&ent_id=d546c0ed-c152-4a7d-97d8-a22e095617a6&user=owaise.imdad@whatfix.com'
             }
         }
     }
